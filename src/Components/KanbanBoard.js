@@ -33,7 +33,7 @@ const KanbanBoard = ({ tickets, grouping, sorting, users }) => {
     <div className="kanban-board">
       {Object.keys(sortedGroupedTickets).map((group) => (
         <div key={group} className="kanban-column">
-          <h3>{group}</h3>
+          <p>{group}</p>
           {sortedGroupedTickets[group].map((ticket) => (
             <TicketCard key={ticket.id} ticket={ticket} />
           ))}

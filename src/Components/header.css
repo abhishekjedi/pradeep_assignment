@@ -1,12 +1,71 @@
-.header {
+.header_filter_container {
   display: flex;
+  flex-direction: column;
+  width: 300px;
   justify-content: space-between;
   padding: 10px;
-  background-color: #f4f4f4;
+  padding-right: 24px;
+  background-color: rgb(245, 245, 245);
   border-bottom: 1px solid #ddd;
+  gap: 16px;
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  border-radius: 8px;
+}
+
+.header p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+}
+
+.display_text{
+  margin-left: 32px;
+  margin-top: 32px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: gray;
+  width: 120px;
+  border: 2px solid rgb(194, 193, 193);
+  border-radius: 4px;
+}
+
+.header {
+  height: 60px;
+  position: relative;
+}
+.grouping,.sorting{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 12px;
+}
+
+.header label {
+  font-weight: 500;
+  font-size: 16px;
+  color: gray;
 }
 
 .header select {
+  width: 160px;
+  border: 2px solid rgb(194, 193, 193);
+  background-color: white;
   padding: 5px;
   font-size: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 8px;
 }

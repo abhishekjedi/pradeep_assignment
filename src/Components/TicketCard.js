@@ -3,16 +3,17 @@ const TicketCard = ({ ticket }) => {
   const priorityLabels = ["No Priority", "Low", "Medium", "High", "Urgent"];
   return (
     <div className="ticket-card">
-      <h4>{ticket.title}</h4>
-      <p>
-        <strong>Status:</strong> {ticket.status}
-      </p>
-      <p>
-        <strong>Priority:</strong> {priorityLabels[ticket.priority]}
-      </p>
-      <p>
-        <strong>User:</strong> {ticket.userId || "Unassigned"}
-      </p>
+      <p className="ticket-id">{ticket.id}</p>
+      <p className="ticket-title">{ticket.title}</p>
+     <div className="ticket-tags-container">
+     <p className="tag-image"> --- </p>
+     {ticket?.tag?.map((tag) => (
+        <div className="ticket-tag-container">
+          <div className="circle">{` `}</div>
+          <p className="ticket-tag">{tag}</p>
+        </div>
+      ))}
+     </div>
     </div>
   );
 };

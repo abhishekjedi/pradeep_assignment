@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./Components/Header.js"; // Import the Header component
 import KanbanBoard from "./Components/KanbanBoard.js";
+import "./App.css";
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -16,6 +17,7 @@ function App() {
           "https://api.quicksell.co/v1/internal/frontend-assignment"
         );
         const data = await response.json();
+        console.log(data);
         setTickets(data.tickets);
         setUsers(data.users);
       } catch (error) {
@@ -41,7 +43,7 @@ function App() {
   }, [grouping, sorting]); // Runs whenever `grouping` or `sorting` changes
 
   return (
-    <div>
+    <div className="main">
       {/* Header Component */}
       <Header
         grouping={grouping}
